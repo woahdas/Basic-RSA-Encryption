@@ -1,0 +1,28 @@
+RSA Cryptography Notes:
+
+Encryption Pair = (5,14)
+Text: B
+
+B in alphabet = 2, 2^5 = 32, 32(mod(14)) = 4
+Encrypted Text: D (D in alphabet is 4)
+
+Decryption Pair = (11, 14)
+D = 4
+4^11 = 4194304
+4194304(mod(14)) = 2
+
+HOW WE GOT THE KEYS:
+1) Choose 2 (preferrably gigantic) prime numbers.
+P = 2
+Q = 7
+
+2) Come up with a number thats the product of those (14), which will become the modulus of the en/de/cryption key.
+
+3)Work out the phi(N, which is 14 here) function. YOU CAN DO THIS by just doing (P-1)(Q-1)
+
+4) Choose a number for e (which was 5). e must be between 1 and phi(N), and then it must be a coprime with N and phi(N)
+NOW you will have the encryption key, which is going to be the answer to (3) and (4).
+
+###DECRYPTION###
+1) Choose a number d (which was 11) such that d * e * mod(phi(N) = 1.
+2) The second number will be N
